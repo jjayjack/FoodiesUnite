@@ -22,7 +22,7 @@ mongoose.connect(
       useNewUrlParser: true, 
       useCreateIndex: true,
       useFindAndModify: false }
-  );
+  ).catch(err=> console.log(err))
   
 
 // Define API routes here
