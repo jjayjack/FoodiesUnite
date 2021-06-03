@@ -1,1 +1,3 @@
-const router = require("express").Router();
+module.exports = {
+  Restaurant: require("./Restaurant"),
+};
