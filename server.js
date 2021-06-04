@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const apiRoutes = require('./routes')
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -26,7 +27,7 @@ mongoose.connect(
   
 
 // Define API routes here
-app.use("/api", apiRoutes);
+app.use(apiRoutes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
