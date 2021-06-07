@@ -1,0 +1,9 @@
+.navWorkplz {
+    background-color: rgb(255, 190, 104); 
+    height: 100px; 
+    width: 100%; 
+    position: fixed; 
+    z-index: 999; 
+    opacity: 0.9; 
+    text-decoration: none;
+}; 
