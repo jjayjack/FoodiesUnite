@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useAppContext } from "../libs/contextLib";
-import { useFormFields } from "../libs/hooksLib";
+import { useAppContext } from "../../libs/contextLib";
+import { useFormFields } from "../../libs/hooksLib";
 import { Auth } from "aws-amplify";
 import { useHistory } from "react-router-dom";
 import "./style.css";
@@ -18,7 +18,7 @@ function Login() {
     return email.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     try {
