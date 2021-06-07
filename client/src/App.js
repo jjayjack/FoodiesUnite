@@ -1,9 +1,21 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import API from './utils/API'
+import Homepage from './components/Homepage/Homepage'
+import NavBar from './components/NavBar/NavBar'
 function App() {
 
   const [restaurants, setRestaurants] = useState([]);
   const [restaurantSearch, setRestaurantSearch] = useState("");
+
+
+    useEffect(() => {
+      API.getRestaurants()
+      .then(res => {
+        console.log(res)
+        // setRestaurants(res.data.results)
+      }).catch(err => {console.log("Error getting data ", err )})
+    }, [])
 
 
 
