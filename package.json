@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/jjayjack/FoodiesUnite#readme",
   "dependencies": {
+    "aws-amplify": "^4.0.3",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.1",
     "concurrently": "^6.2.0",
