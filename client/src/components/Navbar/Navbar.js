@@ -1,9 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+
 import "./style.css";
+import Axios from "axios";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
-function Navbar() {
+function Navbar(props) {
+  const history = useHistory();
+  console.log("PROPS!!!", props);
+
+  const logout = () => {
+    Axios.get("/api/users/logout").then(function () {
+      props.userHasAuthenticated(false);
+      history.push("/");
+    });
+  };
   return (
     <div className="navWorkplz">
       <nav className="navbar navbar-expand-lg">
@@ -25,18 +36,48 @@ function Navbar() {
                 About
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to="/SignIn"
-                className={
-                  window.location.pathname === "/SignIn"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                Sign In
-              </Link>
-            </li>
+            {props.isAuthenticated ? (
+              <li className="nav-item">
+                <button
+                  onClick={logout}
+                  className={
+                    window.location.pathname === "/SignIn"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  Logout!
+                </button>
+              </li>
+            ) : (
+              <div>
+                <li className="nav-item">
+                  <Link
+                    to="/SignIn"
+                    className={
+                      window.location.pathname === "/SignIn"
+                        ? "nav-link active"
+                        : "nav-link"
+                    }
+                  >
+                    Sign In
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/Signup"
+                    className={
+                      window.location.pathname === "/Signup"
+                        ? "nav-link active"
+                        : "nav-link"
+                    }
+                  >
+                    Sign Up
+                  </Link>
+                </li>
+              </div>
+            )}
+
             <li className="nav-item">
               <Link
                 to="/search"

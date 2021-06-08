@@ -7,8 +7,9 @@ import { useAppContext } from "../../libs/contextLib";
 import { useFormFields } from "../../libs/hooksLib";
 import { onError } from "../../libs/errorLib";
 import "./Login.css";
+import Axios from "axios";
 
-export default function Login() {
+export default function Login(props) {
   const history = useHistory();
   const { userHasAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(false);
@@ -27,12 +28,20 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      await Auth.signIn(fields.email, fields.password);
-      userHasAuthenticated(true);
-      history.push("/");
+      Axios.post("/api/users/login", {
+        email: fields.email,
+        password: fields.password,
+      }).then((loggedInPerson) => {
+        console.log("we logged in!!", loggedInPerson);
+        props.userHasAuthenticated(loggedInPerson.data.logged_in);
+        history.push("/");
+      });
+      // await Auth.signIn(fields.email, fields.password);
+      // userHasAuthenticated(true);
+      // history.push("/");
     } catch (e) {
-      onError(e);
-      setIsLoading(false);
+      // onError(e);
+      // setIsLoading(false);
     }
   }
 

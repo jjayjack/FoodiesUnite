@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Homepage = () => {
-    return (
-        <div className="homepage">
-            <h1>Connected!</h1>
-                       
-        </div>
-    )
-}
+  return (
+    <div className="homepage">
+      <h1>Connected! U r signed in!!!</h1>
+    </div>
+  );
+};
 
-export default Homepage
+export default Homepage;
