@@ -7,8 +7,9 @@ import { useFormFields } from "../../libs/hooksLib";
 import { onError } from "../../libs/errorLib";
 import { Auth } from "aws-amplify";
 import "./Signup.css";
+import Axios from "axios";
 
-export default function Signup() {
+export default function Signup(props) {
   const [fields, handleFieldChange] = useFormFields({
     email: "",
     password: "",
@@ -18,7 +19,6 @@ export default function Signup() {
   const history = useHistory();
   const [newUser, setNewUser] = useState(null);
   const { userHasAuthenticated } = useAppContext();
-  const [isLoading, setIsLoading] = useState(false);
 
   function validateForm() {
     return (
@@ -35,35 +35,33 @@ export default function Signup() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    setIsLoading(true);
-
     try {
-      const newUser = await Auth.signUp({
-        username: fields.email,
+      Axios.post("/api/users/signup", {
+        email: fields.email,
         password: fields.password,
+      }).then(function (newUser) {
+        console.log("New user ", newUser);
+        props.userHasAuthenticated(newUser.data.logged_in);
+        history.push("/");
       });
-      setIsLoading(false);
-      setNewUser(newUser);
+      // const newUser = await Auth.signUp({
+      //   username: fields.email,
+      //   password: fields.password,
+      // });
+      // setIsLoading(false);
+      // setNewUser(newUser);
     } catch (e) {
-      onError(e);
-      setIsLoading(false);
+      // onError(e);
+      // setIsLoading(false);
     }
   }
 
   async function handleConfirmationSubmit(event) {
     event.preventDefault();
 
-    setIsLoading(true);
-
     try {
-      await Auth.confirmSignUp(fields.email, fields.confirmationCode);
-      await Auth.signIn(fields.email, fields.password);
-
-      userHasAuthenticated(true);
-      history.push("/");
     } catch (e) {
       onError(e);
-      setIsLoading(false);
     }
   }
 
@@ -85,7 +83,6 @@ export default function Signup() {
           size="lg"
           type="submit"
           variant="success"
-          isLoading={isLoading}
           disabled={!validateConfirmationForm()}
         >
           Verify
@@ -127,7 +124,6 @@ export default function Signup() {
           size="lg"
           type="submit"
           variant="success"
-          isLoading={isLoading}
           disabled={!validateForm()}
         >
           Signup
