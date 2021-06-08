@@ -6,6 +6,7 @@ import { Auth } from "aws-amplify";
 import { useHistory } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { onError } from "./libs/errorLib";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import API from "./utils/API";
 import Homepage from "./components/Homepage/Homepage";
