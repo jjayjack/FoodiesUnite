@@ -26,7 +26,7 @@ const Homepage = () => {
             v: "20180323"
         }
         axios.get(endpoint+ new URLSearchParams(params)).then(res => {
-            console.log(res.data.ressponse.groups[0].items)
+            console.log(res.data.response.groups[0].items)
             setLocation({venues:response.data.response.groups[0].items})
         })
     }
