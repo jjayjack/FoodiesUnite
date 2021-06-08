@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useAppContext } from "../../libs/contextLib";
 import { useFormFields } from "../../libs/hooksLib";
-import "style.css";
+import "./style.css";
 
 function Signup() {
   const [fields, handleFieldChange] = useFormFields({
