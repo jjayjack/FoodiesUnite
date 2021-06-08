@@ -2,7 +2,8 @@ import { response } from 'express'
 import React, {useState, useEffect} from 'react'
 import API from '../../utils/API.js'
 import axios from 'axios'
-import Search from "../Search"
+import Search from "../Search/Search"
+import Carousel from "../Carousel/Carousel"
 
 const Homepage = () => {
     const [location, setLocation] = useState("")
@@ -44,6 +45,7 @@ const Homepage = () => {
                 return <li key={venue.venue.name}>{venue.venue.name} Location: {venue.venue.location.address}</li>
             })}
             </ul>
+            <Carousel />
                        
         </div>
     )
