@@ -1,5 +1,6 @@
 import { query } from 'express'
 import React, {useState} from 'react'
+import axios from 'axios'
 
 
 const Homepage = () => {
@@ -20,7 +21,7 @@ const Homepage = () => {
         });
     };
 
-    getVenues = () => {
+    getVenues = (query) => {
         const endPoint = 'https://api.foursquare.com/v2/venues/explore?'
         const params = {
             client_id: "3QBEPB1GAD1QAVE2EHTGEHJOGRVRZ0Z0XANFVEPGW03WHPCO",
@@ -29,6 +30,9 @@ const Homepage = () => {
             query: query,
             v: "20210706"
         }
+        axios.get(endPoint+ new URLSearchParams(params).then(res => {
+            console.log(res)
+        }))
     }
 
     

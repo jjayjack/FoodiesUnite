@@ -5,10 +5,9 @@ import { AppContext } from "./libs/contextLib";
 import { Auth } from "aws-amplify";
 import { useHistory } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-
 import API from './utils/API'
 import Homepage from './components/Homepage/Homepage'
-import NavBar from './components/NavBar/NavBar'
+import NavBar from './components/Navbar/Navbar'
 function App() {
   const [restaurants, setRestaurants] = useState([]);
   const [restaurantSearch, setRestaurantSearch] = useState("");
