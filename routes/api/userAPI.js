@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const UserModel = require("../../models/user");
-const { route } = require("./restaurantApi");
+// const {  } = ("./restaurantApi");
 
 router.post("/login", (req, res) => {
   UserModel.findOne({ email: req.body.email }).then((loggedInUser) => {
