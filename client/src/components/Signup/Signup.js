@@ -5,7 +5,7 @@ import LoaderButton from "../LoaderButton/LoaderButton.js";
 import { useAppContext } from "../../libs/contextLib";
 import { useFormFields } from "../../libs/hooksLib";
 import { onError } from "../../libs/errorLib";
-import { Auth } from "aws-amplify";
+
 import "./Signup.css";
 import Axios from "axios";
 
