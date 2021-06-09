@@ -2,8 +2,8 @@ import axios from "axios";
 
 
 export default {
-  getRestaurants: function() {
-    return axios.get("/api/restaurants");
+  getRestaurants: function(searcbTerm) {
+    return axios.get("/api/restaurants/" + searcbTerm);
   },
   // starting location for user
   getVenues: function() {

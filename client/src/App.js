@@ -29,12 +29,14 @@ function App() {
       if (data.data.logged_in) {
         userHasAuthenticated(true);
       }
+     // userHasAuthenticated(true);
     });
   }, []);
 
   console.log("STATE in the app file!!!", isAuthenticated);
   return (
     <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
+      <h1> hellooo</h1>
       <Router>
         <NavBar
           collapseOnSelect
@@ -58,6 +60,7 @@ function App() {
                 <Signup userHasAuthenticated={userHasAuthenticated} />
               )}
             />
+          
           </Switch>
         ) : (
           <Route path="/" component={Homepage} />
