@@ -1,12 +1,10 @@
 import React from "react";
 import "./style.css";
 
-function Footer() {
-  return (
-    <footer className="footer">
-      <span>P3 app</span>
-    </footer>
-  );
-}
+const Footer = () => (
+  <div className="footer">
+    <p>this is our footer</p>
+  </div>
+);
 
 export default Footer;
