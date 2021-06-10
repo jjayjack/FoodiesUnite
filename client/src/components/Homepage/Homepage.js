@@ -36,16 +36,16 @@ const Homepage = () => {
                         // return <li key={venue.venue.name}>{venue.venue.name} Location: {venue.venue.location.address}</li>
                         // cconditional rendering based on if venue.venue.delivery exister
                         return <div class="col-sm-4">
-                            <div className="card text-center" style={{ width: "30rem" }} key={"venue-" + index}>
+                            <div className="card text-center w-auto my-3" key={"venue-" + index}>
                                 <div className="card-header">
-                                    <h5 className="card-title">{venue.venue.name}</h5>
+                                    <h5 className="card-title venueName">{venue.venue.name}</h5>
                                 </div>
                                 <div className="card-body">
                                     <h6 className="card-title">{venue.venue.location.address}, {venue.venue.location.city}</h6>
                                     <p className="card-text"></p>
-                                    {/* {venue.venue.delivery != undefined ? <a href={venue.venue.delivery.url} class="btn btn-light">Get It Delivered</a> : null} */}
+                                    {venue.venue.delivery != undefined ? <a href={venue.venue.delivery.url} class="btn text-white deliveryButton" target="_blank">Get It Delivered</a> : <a href="#" class="btn text-white deliveryButton">No Delivery Available</a>}
                                     {/* above is the way to do the rendering with a ternary. because the falsey returns null, we can use the short circuiting technique below for a little bit cleaner code */}
-                                    {venue.venue.delivery && <a href={venue.venue.delivery.url} className="btn btn-dark">Get It Delivered</a>}
+                                    {/* {venue.venue.delivery && <a href={venue.venue.delivery.url} className="btn btn-dark">Get It Delivered</a>} */}
                                 </div>
                             </div>
                         </div>
