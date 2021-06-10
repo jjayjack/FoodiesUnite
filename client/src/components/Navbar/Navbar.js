@@ -52,9 +52,16 @@ function Navbar(props) {
           ) : (
             <li className="nav-item">
               <Link
+
                 to="/SignIn"
                 className={
                   window.location.pathname === "/SignIn"
+
+                to="/about"
+                className={
+                  // window.location.pathname === "/" ||
+                  window.location.pathname === "/about"
+
                     ? "nav-link active"
                     : "nav-link"
                 }

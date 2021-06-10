@@ -1,4 +1,8 @@
 import React from "react";
+import holder1 from "../holders/IMG_3827.jpg";
+import holder2 from "../holders/IMG_3828.jpg";
+import holder3 from "../holders/IMG_3829.jpg";
+
 
 function Carousel(props) {
     return (
@@ -17,13 +21,13 @@ function Carousel(props) {
                 </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src="./holders/IMG_3827.jpg" alt="First slide" />
+                        <img className="d-block w-100" src={holder1} alt="First slide" />
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="./holders/IMG_3828.jpg" alt="Second slide" />
+                        <img className="d-block w-100" src={holder2} alt="Second slide" />
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="./holders/IMG_382.jpg" alt="Third slide" />
+                        <img className="d-block w-100" src={holder3} alt="Third slide" />
                     </div>
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
