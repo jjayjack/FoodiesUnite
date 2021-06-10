@@ -10,6 +10,11 @@ import Axios from "axios";
 import API from "./utils/API";
 import Homepage from "./components/Homepage/Homepage";
 import NavBar from "./components/Navbar/Navbar.js";
+
+import Footer from "./components/Footer/Footer.js";
+
+import About from "./components/About/About";
+
 function App() {
   const [restaurants, setRestaurants] = useState([]);
   const [isAuthenticated, userHasAuthenticated] = useState(false);
@@ -29,14 +34,14 @@ function App() {
       if (data.data.logged_in) {
         userHasAuthenticated(true);
       }
-     // userHasAuthenticated(true);
+      // userHasAuthenticated(true);
     });
   }, []);
 
   console.log("STATE in the app file!!!", isAuthenticated);
   return (
     <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
-      <h1> hellooo</h1>
+      {/* <h1> hellooo</h1> */}
       <Router>
         <NavBar
           collapseOnSelect
@@ -46,6 +51,10 @@ function App() {
           isAuthenticated={isAuthenticated}
           userHasAuthenticated={userHasAuthenticated}
         ></NavBar>
+
+
+        <Route path="/about" component={About} />
+
         {!isAuthenticated ? (
           <Switch>
             <Route
@@ -60,11 +69,11 @@ function App() {
                 <Signup userHasAuthenticated={userHasAuthenticated} />
               )}
             />
-          
           </Switch>
         ) : (
           <Route path="/" component={Homepage} />
         )}
+        <Footer />
       </Router>
     </AppContext.Provider>
   );

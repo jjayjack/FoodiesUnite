@@ -1,9 +1,34 @@
-.navWorkplz {
-  background-color: rgb(255, 190, 104);
+.NavBar {
+   background-color: rgb(255, 190, 104); 
   height: 100px;
   width: 100%;
-
   z-index: 999;
-  opacity: 0.9;
-  text-decoration: none;
+}
+
+li {
+  list-style: none; 
+  padding: 0; 
+} 
+
+a.navbar-brand {
+  color: rgb(249, 243, 231); 
+  padding-left: 50px; 
+  font-size: 40px;
+} 
+
+a.nav-link {
+  color: rgb(249, 243, 231);
+  padding-left: 35px; 
+  font-size: 20px;
+} 
+
+.Nav a:hover {
+  border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+  }
 }
