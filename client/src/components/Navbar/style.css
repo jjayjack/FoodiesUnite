@@ -2,16 +2,33 @@
    background-color: rgb(255, 190, 104); 
   height: 100px;
   width: 100%;
-  /* position: fixed; */
   z-index: 999;
-  opacity: 0.9;
-  /* align-items: center; */
 }
 
 li {
   list-style: none; 
-  margin: 0;
   padding: 0; 
-  color: rgb(255, 255, 255) !important;
 } 
 
+a.navbar-brand {
+  color: rgb(249, 243, 231); 
+  padding-left: 50px; 
+  font-size: 40px;
+} 
+
+a.nav-link {
+  color: rgb(249, 243, 231);
+  padding-left: 35px; 
+  font-size: 20px;
+} 
+
+.Nav a:hover {
+  border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+  }
+}

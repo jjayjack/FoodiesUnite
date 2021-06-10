@@ -17,7 +17,10 @@ function Navbar(props) {
   };
   return (
     <div className="NavBar">
-      <nav className="navbar navbar-expand-lg">
+      <nav
+        className="navbar navbar-expand-lg"
+        // style={{ flex: "nowrap", "justify-content": "space-between" }}
+      >
         <Link className="navbar-brand" to="/">
           Eats Around Me
         </Link>
