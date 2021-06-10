@@ -1,0 +1,18 @@
+tbody td {
+  border-bottom: 1px solid rgb(230, 215, 215);
+}
+
+tbody tr:hover {
+  background-color: rgb(90, 99, 97);
+}
+
+td {
+  font-size: 20px;
+  font-family: "open sans", sans-serif;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
