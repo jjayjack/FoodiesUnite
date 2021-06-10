@@ -14,10 +14,10 @@ function ControlledCarousel() {
   };
 
   return (
-    <div>
+    <div style={{ padding: "50px" }}>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item img-fluid>
-          <Image className="d-block w-100" src={holder1} alt="First slide" />
+          <Image className="d-block w-100 " src={holder1} alt="First slide" />
           <Carousel.Caption>
             <h3>Cucumber Drink Experience</h3>
             <p>YUM YUM YUM YUM</p>
