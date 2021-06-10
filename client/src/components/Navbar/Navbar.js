@@ -25,6 +25,7 @@ function Navbar(props) {
           Eats Around Me
         </Link>
 
+        <div class="collapse navbar-collapse" id="navbarNavDropdown"></div>
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
