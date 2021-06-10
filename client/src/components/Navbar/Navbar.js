@@ -16,82 +16,84 @@ function Navbar(props) {
     });
   };
   return (
-    <div className="navWorkplz">
+    <div className="NavBar">
       <nav className="navbar navbar-expand-lg">
         <Link className="navbar-brand" to="/">
-          Project 3 App
+          Eats Around Me
         </Link>
-        <div>
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link
-                to="/"
-                className={
-                  window.location.pathname === "/" ||
-                  window.location.pathname === "/about"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                About
-              </Link>
-            </li>
-            {props.isAuthenticated ? (
-              <li className="nav-item">
-                <button
-                  onClick={logout}
-                  className={
-                    window.location.pathname === "/SignIn"
-                      ? "nav-link active"
-                      : "nav-link"
-                  }
-                >
-                  Logout!
-                </button>
-              </li>
-            ) : (
-              <div>
-                <li className="nav-item">
-                  <Link
-                    to="/SignIn"
-                    className={
-                      window.location.pathname === "/SignIn"
-                        ? "nav-link active"
-                        : "nav-link"
-                    }
-                  >
-                    Sign In
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="/Signup"
-                    className={
-                      window.location.pathname === "/Signup"
-                        ? "nav-link active"
-                        : "nav-link"
-                    }
-                  >
-                    Sign Up
-                  </Link>
-                </li>
-              </div>
-            )}
 
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link
+              to="/"
+              className={
+                window.location.pathname === "/" ||
+                window.location.pathname === "/about"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              About
+            </Link>
+          </li>
+          {props.isAuthenticated ? (
             <li className="nav-item">
-              <Link
-                to="/search"
+              <button
+                onClick={logout}
                 className={
-                  window.location.pathname === "/search"
+                  window.location.pathname === "/SignIn"
                     ? "nav-link active"
                     : "nav-link"
                 }
               >
-                Search
+                Logout!
+              </button>
+            </li>
+          ) : (
+            <li className="nav-item">
+              <Link
+                to="/SignIn"
+                className={
+                  window.location.pathname === "/SignIn"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Sign In
               </Link>
             </li>
-          </ul>
-        </div>
+          )}
+
+          {props.isAuthenticated ? (
+            ""
+          ) : (
+            <li className="nav-item">
+              <Link
+                to="/Signup"
+                className={
+                  window.location.pathname === "/Signup"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Sign Up
+              </Link>
+            </li>
+          )}
+
+          <li className="nav-item">
+            <Link
+              to="/search"
+              className={
+                window.location.pathname === "/search"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Search
+            </Link>
+          </li>
+        </ul>
       </nav>
     </div>
   );
