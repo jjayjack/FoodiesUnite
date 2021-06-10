@@ -10,7 +10,11 @@ import Axios from "axios";
 import API from "./utils/API";
 import Homepage from "./components/Homepage/Homepage";
 import NavBar from "./components/Navbar/Navbar.js";
+
 import Footer from "./components/Footer/Footer.js";
+
+import About from "./components/About/About";
+
 function App() {
   const [restaurants, setRestaurants] = useState([]);
   const [isAuthenticated, userHasAuthenticated] = useState(false);
@@ -47,6 +51,9 @@ function App() {
           isAuthenticated={isAuthenticated}
           userHasAuthenticated={userHasAuthenticated}
         ></NavBar>
+
+
+        <Route path="/about" component={About} />
 
         {!isAuthenticated ? (
           <Switch>
