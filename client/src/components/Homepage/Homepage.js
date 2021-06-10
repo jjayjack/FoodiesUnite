@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "../../utils/API.js";
 import axios from "axios";
 import Search from "../Search/Search";
+import "./index.css";
 // import Carousel from "../Carousel/Carousel"
 
 const Homepage = () => {
