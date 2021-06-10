@@ -3,7 +3,7 @@ import API from "../../utils/API.js";
 import axios from "axios";
 import Search from "../Search/Search";
 import "./index.css";
-// import Carousel from "../Carousel/Carousel"
+import ControlledCarousel from "../Carousel/Carousel";
 
 const Homepage = () => {
   const [location, setLocation] = useState("");
@@ -34,7 +34,7 @@ const Homepage = () => {
           return <h1> {venue.venue.name}</h1>;
         })}
       </ul>
-      {/* <Carousel venues={venues} /> */}
+      <ControlledCarousel venues={venues} />
     </div>
   );
 };
