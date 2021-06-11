@@ -41,7 +41,7 @@ function Navbar(props) {
           </li>
           {props.isAuthenticated ? (
             <li className="nav-item">
-              <button
+              <a
                 onClick={logout}
                 className={
                   window.location.pathname === "/SignIn"
@@ -49,8 +49,8 @@ function Navbar(props) {
                     : "nav-link"
                 }
               >
-                Logout!
-              </button>
+                Logout
+              </a>
             </li>
           ) : (
             <li className="nav-item">
@@ -83,19 +83,6 @@ function Navbar(props) {
               </Link>
             </li>
           )}
-
-          <li className="nav-item">
-            <Link
-              to="/search"
-              className={
-                window.location.pathname === "/search"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Search
-            </Link>
-          </li>
         </ul>
       </nav>
     </div>
