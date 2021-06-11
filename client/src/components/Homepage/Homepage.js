@@ -26,7 +26,6 @@ const Homepage = () => {
   console.log("Venue state!!!", venues);
   return (
     <div className="homepage">
-      <h1>Tasty Treats and Delicious Eats!</h1>
       <Search setVenues={setVenues} />
 
       {/* SHORT CIRCUITING v important, super useful */}

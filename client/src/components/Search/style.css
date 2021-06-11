@@ -1,0 +1,22 @@
+.centerbar {
+  background-color: rgb(255, 190, 104);
+  border-radius: 5px;
+  border-color: rgb(255, 190, 104);
+  color: white;
+}
+
+.centersearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+}
+
+.inputstyle {
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: solid;
+  border-color: rgb(255, 190, 104);
+  opacity: 0.9;
+}
