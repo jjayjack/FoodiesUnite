@@ -7,7 +7,6 @@ import Axios from "axios";
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar(props) {
   const history = useHistory();
-  console.log("PROPS!!!", props);
 
   const logout = () => {
     Axios.get("/api/users/logout").then(function () {
@@ -17,10 +16,7 @@ function Navbar(props) {
   };
   return (
     <div className="NavBar">
-      <nav
-        className="navbar navbar-expand-lg"
-        // style={{ flex: "nowrap", "justify-content": "space-between" }}
-      >
+      <nav className="navbar navbar-expand-lg">
         <Link className="navbar-brand" to="/">
           Eats Around Me
         </Link>

@@ -1,4 +1,11 @@
-.footer {
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+* {
+    font-family: "Fredoka One", cursive;
+}
+
+.footer { 
+    color: rgb(249, 243, 231);
     margin-top: 1rem; 
     padding: 1rem; 
     background-color: rgb(255, 190, 104); 

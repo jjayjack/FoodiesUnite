@@ -26,6 +26,7 @@ a.nav-link {
   border-bottom: 5px solid rgb(0, 0, 0);
 }
 
+/* have to adjust for size (thats what she said) */
 @media (min-width: 992px) {
   .navbar-expand-lg {
     flex-wrap: nowrap;
