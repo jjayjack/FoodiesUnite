@@ -14,6 +14,7 @@ import NavBar from "./components/Navbar/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 
 import About from "./components/About/About";
+import NotLoggedIn from "./components/NotLoggedIn/NotLoggedIn.js";
 
 function App() {
   const [restaurants, setRestaurants] = useState([]);
@@ -30,11 +31,10 @@ function App() {
     //     console.log("Error getting data ", err);
     //   });
     Axios.get("/api/users/loginCheck").then(function (data) {
-      console.log("Daytaaa login check!!!", data.data.logged_in);
+
       if (data.data.logged_in) {
         userHasAuthenticated(true);
       }
-      // userHasAuthenticated(true);
     });
   }, []);
 
@@ -57,6 +57,7 @@ function App() {
 
         {!isAuthenticated ? (
           <Switch>
+            <Route path="/" component={NotLoggedIn} />
             <Route
               path="/signin"
               render={() => (
