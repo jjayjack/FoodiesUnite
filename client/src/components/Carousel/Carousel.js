@@ -1,42 +1,60 @@
 import React, { useState } from "react";
 import Image from "react-bootstrap/Image";
 import Carousel from "react-bootstrap/Carousel";
-import holder1 from "../holders/IMG_3827.jpg";
-import holder2 from "../holders/IMG_3828.jpg";
-import holder3 from "../holders/IMG_3829.jpg";
+// Data placeholder images
+// import holder1 from "../holders/IMG_3827.jpg";
+// import holder2 from "../holders/IMG_3828.jpg";
+// import holder3 from "../holders/IMG_3829.jpg";
 import "./carousel.css";
 
-function ControlledCarousel() {
+function ControlledCarousel(props) {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
 
+  console.log(props);
   return (
     <div style={{ padding: "50px" }}>
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel
+        venues={props.venues}
+        activeIndex={index}
+        onSelect={handleSelect}
+      >
         <Carousel.Item img-fluid>
-          <Image className="d-block w-100 " src={holder1} alt="First slide" />
+          <Image
+            className="d-block w-100 "
+            src={props.venues[0].venue.photo}
+            alt="First slide"
+          />
           <Carousel.Caption>
-            <h3>Cucumber Drink Experience</h3>
-            <p>YUM YUM YUM YUM</p>
+            <h3>{props.venues[0].venue.name}</h3>
+            <p>{props.venues[0].venue.location.address}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item img-fluid>
-          <Image className="d-block w-100" src={holder2} alt="Second slide" />
+          <Image
+            className="d-block w-100"
+            src={props.venues[1].venue.photo}
+            alt="Second slide"
+          />
 
           <Carousel.Caption>
-            <h3>Lettuce and Things</h3>
-            <p>DELICIOUS DELICIOUS</p>
+            <h3>{props.venues[1].venue.name}</h3>
+            <p>{props.venues[1].venue.location.address}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item img-fluid>
-          <img className="d-block w-100" src={holder3} alt="Third slide" />
+          <img
+            className="d-block w-100"
+            src={props.venues[2].venue.photo}
+            alt="Third slide"
+          />
 
           <Carousel.Caption>
-            <h3>Chickpea Experimental</h3>
-            <p>TASTY TREATS TASTY TREATS TASTY TREATS</p>
+            <h3>{props.venues[2].venue.name}</h3>
+            <p>{props.venues[2].venue.location.address}</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
