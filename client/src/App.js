@@ -10,6 +10,7 @@ import Homepage from "./components/Homepage/Homepage";
 import NavBar from "./components/Navbar/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import About from "./components/About/About";
+import NotLoggedIn from "./components/NotLoggedIn/NotLoggedIn.js";
 
 function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
@@ -39,6 +40,7 @@ function App() {
 
         {!isAuthenticated ? (
           <Switch>
+            <Route path="/" component={NotLoggedIn} />
             <Route
               path="/signin"
               render={() => (
