@@ -22,12 +22,11 @@ console.log('Searchterm', searchTerm)
         <div>
             <input onChange={changeHandler}
             type="text"
-            paceholder="search venue"
+            placeholder="search venue"
             name="searchInput"
             id="searchInput"
             />
             <button onClick={handleClick}>Search</button>
-            
         </div>
     )
 }
