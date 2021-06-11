@@ -16,3 +16,8 @@ p {
   text-align: center;
 }
 
+.city {
+  width:500px;
+  justify-content: center;
+  display:flex;
+}
