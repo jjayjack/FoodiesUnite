@@ -5,12 +5,10 @@ import "./style.css";
 function About() {
   return (
     <>
-      <div className= "jumbo">
-        <h1>Team Members of FOODIESUNITE</h1>
-        <p>
-          A Great Cast of Food Lovers
-        </p>
-        <a href= "/Search">{"search for good food"}</a>
+      <div className="jumbo">
+        <h1>Team Members of Eats Around Me</h1>
+        <p>A Great Cast of Food Lovers</p>
+        <a href="/Search">{"search for good food"}</a>
       </div>
 
       <div>
@@ -71,7 +69,9 @@ function About() {
               <td>JJ</td>
               <td>Espinoza</td>
               <td>
-                <a href="https://frozen-harbor-45051.herokuapp.com/">{"Click for Profile"}</a>
+                <a href="https://frozen-harbor-45051.herokuapp.com/">
+                  {"Click for Profile"}
+                </a>
               </td>
               <td>
                 <a href={"https://github.com/0117Javi"}>{"GitHub Account"}</a>
@@ -87,13 +87,7 @@ function About() {
                 </a>
               </td>
               <td>
-                <a
-                  href={
-                    ""
-                  }
-                >
-                  {"GitHub Account"}
-                </a>
+                <a href={""}>{"GitHub Account"}</a>
               </td>
             </tr>
           </tbody>

@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import Image from "react-bootstrap/Image";
 import Carousel from "react-bootstrap/Carousel";
-// Data placeholder images
-// import holder1 from "../holders/IMG_3827.jpg";
-// import holder2 from "../holders/IMG_3828.jpg";
-// import holder3 from "../holders/IMG_3829.jpg";
-import "./carousel.css";
 
 function ControlledCarousel(props) {
   const [index, setIndex] = useState(0);
@@ -62,5 +57,4 @@ function ControlledCarousel(props) {
   );
 }
 
-// render(<ControlledCarousel />);
 export default ControlledCarousel;

@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import LoaderButton from "../LoaderButton/LoaderButton.js";
 import { useAppContext } from "../../libs/contextLib";
 import { useFormFields } from "../../libs/hooksLib";
-import { onError } from "../../libs/errorLib";
+import { onError } from "../../libs/errorLib"; //this will break app LEAVE IT!!!!!!!
 import "./Login.css";
 import Axios from "axios";
 
@@ -36,12 +36,9 @@ export default function Login(props) {
         props.userHasAuthenticated(loggedInPerson.data.logged_in);
         history.push("/");
       });
-      // await Auth.signIn(fields.email, fields.password);
-      // userHasAuthenticated(true);
-      // history.push("/");
     } catch (e) {
       // onError(e);
-      // setIsLoading(false);
+      // setIsLoading(false);  //LEAVE ME ALONE!!!!!!!!
     }
   }
 

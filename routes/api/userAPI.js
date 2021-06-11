@@ -19,10 +19,8 @@ router.post("/login", (req, res) => {
 });
 
 router.post("/signUp", (req, res) => {
-  console.log("Sing up is happening!!!");
   UserModel.create({ email: req.body.email, password: req.body.password }).then(
     function (newUser) {
-      console.log("new user we made!!", newUser);
       req.session.save(() => {
         req.session.logged_in = true;
         req.session.user_id = newUser._id;

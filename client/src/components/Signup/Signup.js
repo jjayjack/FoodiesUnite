@@ -40,19 +40,12 @@ export default function Signup(props) {
         email: fields.email,
         password: fields.password,
       }).then(function (newUser) {
-        console.log("New user ", newUser);
         props.userHasAuthenticated(newUser.data.logged_in);
         history.push("/");
       });
-      // const newUser = await Auth.signUp({
-      //   username: fields.email,
-      //   password: fields.password,
-      // });
-      // setIsLoading(false);
-      // setNewUser(newUser);
     } catch (e) {
       // onError(e);
-      // setIsLoading(false);
+      // setIsLoading(false); // leave this
     }
   }
 

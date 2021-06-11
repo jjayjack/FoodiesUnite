@@ -19,6 +19,6 @@ export default function LoaderButton({
       {isLoading && <BsArrowRepeat className="spinning" />}
       {props.children}
     </Button>
-    // <button>{props.children}</button>
+    // <button>{props.children}</button> fail safe
   );
 }
