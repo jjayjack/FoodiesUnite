@@ -1,11 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+* {
+  font-family: "Fredoka One", cursive;
+}
+
 .homepage {
-    background-color: rgb(249, 243, 231);
+  background-color: rgb(249, 243, 231);
 }
 
 .deliveryButton {
-    background-color: rgb(255, 190, 104);
+  background-color: rgb(255, 190, 104);
 }
 
 .venueName {
-    color: rgb(255, 190, 104);
+  color: rgb(255, 190, 104);
 }
