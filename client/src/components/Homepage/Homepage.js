@@ -15,7 +15,7 @@ const Homepage = () => {
       {venues.length > 0 && <ControlledCarousel venues={venues} />}
       <ul>
         <div className="row">
-          {venues.slice(0, 5).map((venue, index) => {
+          {venues.slice(0, 6).map((venue, index) => {
             // cconditional rendering based on if venue.venue.delivery exister
             return (
               <div className="col-sm-4">

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import "./style.css";
-import holder1 from "../holders/img_3852.jpg";
-import holder2 from "../holders/img_3853.jpg";
-import holder3 from "../holders/img_3856.jpg";
+// import holder1 from "../holders/img_3852.jpg";
+// import holder2 from "../holders/img_3853.jpg";
+// import holder3 from "../holders/img_3856.jpg";
 import Image from "react-bootstrap/Image";
 import Carousel from "react-bootstrap/Carousel";
-import holder4 from "../holders/img_3857.jpg"
-import holder5 from "../holders/img_3858.jpg"
-import holder6 from "../holders/img_3859.jpg"
+// import holder4 from "../holders/img_3857.jpg"
+// import holder5 from "../holders/img_3858.jpg"
+// import holder6 from "../holders/img_3859.jpg"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 
@@ -28,12 +27,11 @@ const NotLoggedIn = () => {
   <Container fluid>
     <Row className="display" style={{ padding: "50px", justifyContent: "center", display: "flex" }}>
         <Carousel
-          controls false
+          nextLabel=""
+          prevLabel=""
           activeIndex={index}
           onSelect={handleSelect}
           className="city"
-          touch="false"
-          wrap true
           interval={5000}
         >
           <Carousel.Item >

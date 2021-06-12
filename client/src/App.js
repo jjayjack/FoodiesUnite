@@ -53,9 +53,9 @@ function App() {
             <Route exact path="/" component={NotLoggedIn} />
           </Switch>
         ) : (
-          <Route path="/" component={Homepage} />
+          <Route exact path="/" component={Homepage} />
         )}
-        <Route path="/about" component={About} />
+        <Route exact path="/about" component={About} />
         <Footer />
       </Router>
     </AppContext.Provider>
