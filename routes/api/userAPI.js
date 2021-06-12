@@ -18,7 +18,7 @@ router.post("/login", (req, res) => {
   });
 });
 
-router.post("/signUp", (req, res) => {
+router.post("/signup", (req, res) => {
   UserModel.create({ email: req.body.email, password: req.body.password }).then(
     function (newUser) {
       req.session.save(() => {

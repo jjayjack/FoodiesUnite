@@ -41,7 +41,7 @@ module.exports = {
 
           const photoURL =
             getPhoto.data.response.photos.items[0].prefix +
-            "300x300" +
+            "500x500" +
             getPhoto.data.response.photos.items[0].suffix;
 
           let restaurant = {
