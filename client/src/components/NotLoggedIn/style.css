@@ -2,5 +2,32 @@
     width:500px;
     justify-content: center;
     display: flex;
-
 }
+
+.paragraph {
+    background: rgb(249, 243, 231, 0.9);
+    color: rgb(255,190,104);
+    /* border-radius: 20px; */
+    position: absolute;
+    bottom: 0;    
+    padding-bottom: 15px
+}
+
+.text{
+    font-size: 27px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-bottom: 70px;
+    
+}
+
+/* image {
+    https://fastly.4sqi.net/img/general/500x500/HD3pKG3Zw1Qr6SMCOOb3kT-EtekJoKglKxnMTZ_X6T4.jpg
+    https://fastly.4sqi.net/img/general/300x300/7_Sw3n8FRktnBKmMQ5Jx_eZ68LHQNioTtPdAlQeVUlk.jpg
+    https://fastly.4sqi.net/img/general/300x300/19306463_NeBbj12L5QChV7j5qQiWjW0Qrh44wcwFXlgaXQ3godI.jpg
+    https://fastly.4sqi.net/img/general/300x300/45345517_AQ_jEVtBoVpiacpEzi1gFhmrMI8BzvQrORUw2LmMcz8.jpg
+    https://fastly.4sqi.net/img/general/500x500/339236402_EVgKLmqfuN6MIj4adpA1ca99aNy6Ulh-TgLUpz36mLk.jpg
+    https://fastly.4sqi.net/img/general/300x300/IO0ZW2VSQQCN1E0LMPCVLPCYN5SOLNV3A0W20I2PNXASS0AN.jpg
+    https://fastly.4sqi.net/img/general/300x300/412763_I_scpcM6Mj0TlCMUdH3veZ5szcbLtpTy-qY4BXdWK2g.jpg
+    https://fastly.4sqi.net/img/general/500x500/n3J0LDoMxTFnhl20q4jgbS4Nr7kN-8stdelRZYJFkCk.jpg
+} */

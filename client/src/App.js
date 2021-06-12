@@ -36,11 +36,8 @@ function App() {
           userHasAuthenticated={userHasAuthenticated}
         ></NavBar>
 
-        <Route path="/about" component={About} />
-
         {!isAuthenticated ? (
           <Switch>
-            <Route path="/" component={NotLoggedIn} />
             <Route
               path="/signin"
               render={() => (
@@ -53,10 +50,12 @@ function App() {
                 <Signup userHasAuthenticated={userHasAuthenticated} />
               )}
             />
+            <Route exact path="/" component={NotLoggedIn} />
           </Switch>
         ) : (
           <Route path="/" component={Homepage} />
         )}
+        <Route path="/about" component={About} />
         <Footer />
       </Router>
     </AppContext.Provider>

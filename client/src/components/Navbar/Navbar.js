@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-
 import "./style.css";
 import Axios from "axios";
 
@@ -40,7 +39,7 @@ function Navbar(props) {
               <a
                 onClick={logout}
                 className={
-                  window.location.pathname === "/SignIn"
+                  window.location.pathname === "/signin"
                     ? "nav-link active"
                     : "nav-link"
                 }
@@ -51,9 +50,9 @@ function Navbar(props) {
           ) : (
             <li className="nav-item">
               <Link
-                to="/SignIn"
+                to="signin"
                 className={
-                  window.location.pathname === "/SignIn"
+                  window.location.pathname === "/signin"
                     ? "nav-link active"
                     : "nav-link"
                 }
@@ -68,9 +67,9 @@ function Navbar(props) {
           ) : (
             <li className="nav-item">
               <Link
-                to="/Signup"
+                to="signup"
                 className={
-                  window.location.pathname === "/Signup"
+                  window.location.pathname === "/signup"
                     ? "nav-link active"
                     : "nav-link"
                 }
