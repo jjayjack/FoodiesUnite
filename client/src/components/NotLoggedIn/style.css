@@ -2,24 +2,22 @@
     width:500px;
     justify-content: center;
     display: flex;
+    margin-bottom: 10px;
+
 }
 
 .paragraph {
-    background: rgb(249, 243, 231, 0.9);
+    background: rgba(249, 232, 231, 0.9);
     color: rgb(255,190,104);
-    /* border-radius: 20px; */
-    position: absolute;
-    bottom: 0;    
-    padding-bottom: 15px
+    font-size: 27px; 
+    margin-bottom: 125px;
+    text-align:center;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.text{
-    font-size: 27px;
-    padding-left: 150px;
-    padding-right: 150px;
-    margin-bottom: 70px;
-    
-}
+
 
 /* image {
     https://fastly.4sqi.net/img/general/500x500/HD3pKG3Zw1Qr6SMCOOb3kT-EtekJoKglKxnMTZ_X6T4.jpg

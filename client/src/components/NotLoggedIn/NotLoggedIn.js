@@ -9,6 +9,8 @@ import Carousel from "react-bootstrap/Carousel";
 import holder4 from "../holders/img_3857.jpg"
 import holder5 from "../holders/img_3858.jpg"
 import holder6 from "../holders/img_3859.jpg"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
 
 
 
@@ -23,14 +25,14 @@ const NotLoggedIn = () => {
 
   return (
     <>
-
-      <div style={{ padding: "50px", justifyContent: "center", display: "flex" }}>
+  <Container fluid>
+    <Row className="display" style={{ padding: "50px", justifyContent: "center", display: "flex" }}>
         <Carousel
           controls false
           activeIndex={index}
           onSelect={handleSelect}
           className="city"
-          touch false
+          touch="false"
           wrap true
           interval={5000}
         >
@@ -57,15 +59,15 @@ const NotLoggedIn = () => {
             />
           </Carousel.Item>
         </Carousel>
-        <div className="paragraph">
-          <p className="text">Welcome to our application Eats Around Me.
+    </Row>
+    <Row className="paragraph">
+          Welcome to our application Eats Around Me.
             Chicago has some of the best food across the nation because of the wide variety of individuals who call this city home and share their love through their food.
             We are a Chicago-based group that is interested in food spots that are near us.
             Using FourSquare's API we created this app to give us food recommendations based on key words typed into our search bar.
-            To begin, sign up and search.
-          </p>
-        </div>
-      </div>
+            To begin, sign up and search. 
+    </Row>
+  </Container>
     </>
   )
 }
