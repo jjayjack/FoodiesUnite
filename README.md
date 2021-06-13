@@ -45,7 +45,32 @@ Login or signup to use our search functionality, powered by Foursquare, to find 
 
 ## Screenshots
 
-- <img src="" alt=""/>
+- Dashboard
+  <img src="./client/assets/eamdashboard.png" alt="dashboard"/>
+
+- Login
+  <img src="./client/assets/eamlogin.png" alt="login"/>
+
+- Signup
+  <img src="./client/assets/eamsignup.png" alt="signup"/>
+
+- Search
+  <img src="./client/assets/eamsearch.png" alt="search"/>
+
+- Search 2
+  <img src="./client/assets/eamsearch2.png" alt="search"/>
+
+- About
+  <img src="./client/assets/eamabout.png" alt="about"/>
+
+- About 2
+  <img src="./client/assets/eamabout2.png" alt="about2"/>
+
+- Code of interest: Short Circuiting
+  <img src="./client/assets/shortcircuiting.png" alt="search"/>
+
+- Code of interest: Data Scrapping
+  <img src="./client/assets/datascrapping.png" alt="datascrape"/>
 
 ## Contact
 
