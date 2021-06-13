@@ -15,11 +15,11 @@ NU-CHI Project 3
 
 ## Contributors
 
-@jjayjack(https://github.com/jjayjack)
-@haydenabeck(https://github.com/haydenabeck)
-@0117Javi(https://github.com/0117Javi)
-@JusticeGTR(https://github.com/JusticeGTR)
-@JAC61090(https://github.com/JAC61090)
+[@jjayjack](https://github.com/jjayjack)
+[@haydenabeck](https://github.com/haydenabeck)
+[@0117Javi](https://github.com/0117Javi)
+[@JusticeGTR](https://github.com/JusticeGTR)
+[@JAC61090](https://github.com/JAC61090)
 
 ## Description:
 
