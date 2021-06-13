@@ -9,14 +9,17 @@ NU-CHI Project 3
 
 - Heroku
   https://foodiesunite.herokuapp.com/
+  ### Login for testing:
+  Email: grade@test.test
+  Password: testing
 
 ## Contributors
 
-@jjayjack
-@haydenabeck
-@0117Javi
-@JusticeGTR
-@AC61090
+@jjayjack(https://github.com/jjayjack)
+@haydenabeck(https://github.com/haydenabeck)
+@0117Javi(https://github.com/0117Javi)
+@JusticeGTR(https://github.com/JusticeGTR)
+@JAC61090(https://github.com/JAC61090)
 
 ## Description:
 
