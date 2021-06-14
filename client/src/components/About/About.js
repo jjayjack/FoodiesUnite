@@ -29,6 +29,8 @@ function About() {
         activeIndex={index}
         onSelect={handleSelect}
         className="city"
+        nextLabel=""
+        prevLabel=""
       >
         <Carousel.Item >
           <Image
