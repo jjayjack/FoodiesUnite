@@ -24,17 +24,21 @@ function NavNav(props) {
     <Nav className="mr-auto Nav">
       <Nav.Link href="/about" style={{color: "rgb(249, 243, 231)", fontSize: "20px"}}>About</Nav.Link>
       {props.isAuthenticated 
+
       ? 
         (
+          <>
+          <Nav.Link href="/search" style={{color: "rgb(249, 243, 231)", fontSize: "20px"}} className="link">
+            Search
+            </Nav.Link>
           <Nav.Link 
             href="/signin" 
             onClick={logout}
             style={{color: "rgb(249, 243, 231)", fontSize: "20px"}}
-            className="nav-link"
           >
             Logout
           </Nav.Link>
-        
+        </>
         )
       :
         (

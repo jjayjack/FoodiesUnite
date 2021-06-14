@@ -34,7 +34,7 @@ export default function Login(props) {
       }).then((loggedInPerson) => {
         console.log("we logged in!!", loggedInPerson);
         props.userHasAuthenticated(loggedInPerson.data.logged_in);
-        history.push("/");
+        history.push("/search");
       });
     } catch (e) {
       // onError(e);

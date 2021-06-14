@@ -50,11 +50,11 @@ function App() {
                 <Signup userHasAuthenticated={userHasAuthenticated} />
               )}
             />
-            <Route exact path="/" component={NotLoggedIn} />
           </Switch>
         ) : (
-          <Route exact path="/" component={Homepage} />
+          <Route exact path="/search" component={Homepage} />
         )}
+        <Route exact path="/" component={NotLoggedIn} />
         <Route exact path="/about" component={About} />
         <Footer />
       </Router>

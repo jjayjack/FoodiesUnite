@@ -20,7 +20,7 @@ function About() {
       <div className="jumbo">
         <h1>Team Members of Eats Around Me</h1>
         <p>A Great Cast of Food Lovers</p>
-        <a href="/" className="searchLink">{"search for good food"}</a>
+        <a href="/search" className="searchLink">{"search for good food"}</a>
 
       </div>
 
