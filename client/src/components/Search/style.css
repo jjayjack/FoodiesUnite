@@ -22,3 +22,15 @@
   border-color: rgb(255, 190, 104);
   opacity: 0.9;
 }
+.result {
+  display: flex;
+  justify-content: center;
+}
+
+.taco-alert {
+  border: 3px solid rgb(255, 190, 104);
+  text-align: center;
+  width: fit-content;
+  color:black
+  
+}
