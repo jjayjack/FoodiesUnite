@@ -1,10 +1,12 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./style.css";
 import Axios from "axios";
+import Navbar from "react-bootstrap/Navbar"
+import Nav from 'react-bootstrap/Nav'
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
-function Navbar(props) {
+function NavNav(props) {
   const history = useHistory();
 
   const logout = () => {
@@ -14,74 +16,51 @@ function Navbar(props) {
     });
   };
   return (
-    <div className="NavBar">
-      <nav className="navbar navbar-expand-lg">
-        <Link className="navbar-brand" to="/">
-          Eats Around Me
-        </Link>
-
-        <div className="collapse navbar-collapse" id="navbarNavDropdown"></div>
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link
-              to="about"
-              className={
-                window.location.pathname === "/about"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
+    <Navbar expand="lg" style={{backgroundColor: "rgb(255, 190, 104)", padding: "5px"}}>
+  <Navbar.Brand href="/" style={{color: "rgb(249, 243, 231)", fontSize: "55px", width: "100%"}}>Eats Around Me
+  </Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Collapse id="basic-navbar-nav" style={{justifyContent: "flex-end"}}>
+    <Nav className="mr-auto Nav">
+      <Nav.Link href="/about" style={{color: "rgb(249, 243, 231)", fontSize: "20px"}}>About</Nav.Link>
+      {props.isAuthenticated 
+      ? 
+        (
+          <Nav.Link 
+            href="/signin" 
+            onClick={logout}
+            style={{color: "rgb(249, 243, 231)", fontSize: "20px"}}
+            className="nav-link"
+          >
+            Logout
+          </Nav.Link>
+        
+        )
+      :
+        (
+          <>
+          <Nav.Link 
+            href="/signin"
+            style={{color: "rgb(249, 243, 231)", fontSize: "20px"}}
             >
-              About
-            </Link>
-          </li>
-          {props.isAuthenticated ? (
-            <li className="nav-item">
-              <a
-                onClick={logout}
-                className={
-                  window.location.pathname === "/signin"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                Logout
-              </a>
-            </li>
-          ) : (
-            <li className="nav-item">
-              <Link
-                to="signin"
-                className={
-                  window.location.pathname === "/signin"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                Sign In
-              </Link>
-            </li>
-          )}
+              Sign In
+            </Nav.Link>
+            <Nav.Link
+            href="/signup"
+            style={{color: "rgb(249, 243, 231)", fontSize: "20px"}}
+            >
+              Sign Up
+            </Nav.Link>
+          </>
+        )}
+    </Nav>
+  </Navbar.Collapse>
 
-          {props.isAuthenticated ? (
-            ""
-          ) : (
-            <li className="nav-item">
-              <Link
-                to="signup"
-                className={
-                  window.location.pathname === "/signup"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                Sign Up
-              </Link>
-            </li>
-          )}
-        </ul>
-      </nav>
-    </div>
+
+</Navbar>
+
+
   );
 }
 
-export default Navbar;
+export default NavNav;
