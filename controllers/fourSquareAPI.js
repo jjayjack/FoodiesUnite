@@ -16,11 +16,12 @@ module.exports = {
         },
       })
       .then(async function (data, body) {
+        if (! (data.data.response.groups && data.data.response.groups.length > 0)){
+          res.json({data: []})
+          return;
+
+        }
         const allRestaurantResults = data.data.response.groups[0].items;
-        //individual IDs for each venue
-        const carouselIdForFirstItem = allRestaurantResults[0].venue.id;
-        const carouselIdForSecondItem = allRestaurantResults[1].venue.id;
-        const carouselIdForThirdItem = allRestaurantResults[2].venue.id;
         // function for photos
         const restDets = async (i) => {
           const venueName = allRestaurantResults[i].venue.name;
@@ -39,7 +40,10 @@ module.exports = {
             }
           );
 
-          const photoURL =
+          if (!(getPhoto.data.response.photos.items && getPhoto.data.response.photos.items.length > 0)){
+            return}
+
+          let photoURL =
             getPhoto.data.response.photos.items[0].prefix +
             "500x500" +
             getPhoto.data.response.photos.items[0].suffix;
@@ -60,6 +64,9 @@ module.exports = {
             else console.log("Document inserted successfully!");
           });
         };
+
+        if (allRestaurantResults.length > 0){
+        const carouselIdForFirstItem = allRestaurantResults[0].venue.id;
         //checking to see if stored restaurant_id matches the first item with the array;
         let storedIDone = await restaurantStore
           .find({ restaurant_id: carouselIdForFirstItem })
@@ -73,8 +80,10 @@ module.exports = {
         //set carousel img to one in database
         else {
           allRestaurantResults[0].venue.photo = storedIDone[0].img;
-        }
+        }}
 
+        if(allRestaurantResults.length > 1 ){
+        const carouselIdForSecondItem = allRestaurantResults[1].venue.id;
         let storedIDtwo = await restaurantStore
           .find({ restaurant_id: carouselIdForSecondItem })
           .exec();
@@ -84,8 +93,9 @@ module.exports = {
           await restDets(1);
         } else {
           allRestaurantResults[1].venue.photo = storedIDtwo[0].img;
-        }
-
+        }}
+        if(allRestaurantResults.length > 2){
+        const carouselIdForThirdItem = allRestaurantResults[2].venue.id;
         let storedIDthree = await restaurantStore
           .find({ restaurant_id: carouselIdForThirdItem })
           .exec();
@@ -94,7 +104,7 @@ module.exports = {
           await restDets(2);
         } else {
           allRestaurantResults[2].venue.photo = storedIDthree[0].img;
-        }
+        }}
 
         res.json(allRestaurantResults);
       });
