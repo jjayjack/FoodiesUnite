@@ -1,35 +1,3 @@
-.NavBar {
-  background-color: rgb(255, 190, 104);
-  height: 100px;
-  width: 100%;
-  z-index: 999;
-}
-
-li {
-  list-style: none;
-  padding: 0;
-}
-
-a.navbar-brand {
-  color: rgb(249, 243, 231);
-  padding-left: 50px;
-  font-size: 55px;
-}
-
-a.nav-link {
-  color: rgb(249, 243, 231);
-  padding-left: 35px;
-  font-size: 20px;
-}
-
 .Nav a:hover {
-  border-bottom: 5px solid rgb(0, 0, 0);
-}
-
-/* have to adjust for size (thats what she said) */
-@media (min-width: 992px) {
-  .navbar-expand-lg {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
+  background-color: black
 }

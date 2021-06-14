@@ -8,11 +8,13 @@ const Homepage = () => {
   const [venues, setVenues] = useState([]);
   console.log("Venue state!!!", venues);
   return (
+    
     <div className="homepage">
       <Search setVenues={setVenues} />
 
       {/* SHORT CIRCUITING v important, super useful */}
       {venues.length > 0 && <ControlledCarousel venues={venues} />}
+      
       <ul>
         <div className="row">
           {venues.slice(0, 6).map((venue, index) => {
