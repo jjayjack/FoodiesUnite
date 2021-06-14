@@ -32,29 +32,68 @@ const NotLoggedIn = () => {
           activeIndex={index}
           onSelect={handleSelect}
           className="city"
-          interval={5000}
+          interval={3000}
         >
-          <Carousel.Item >
+          <Carousel.Item style={{border:"5px solid rgb(255, 190, 104)", borderRadius: "5px"}}>
             <Image
               className="w-100 "
-              src="https://fastly.4sqi.net/img/general/500x500/HD3pKG3Zw1Qr6SMCOOb3kT-EtekJoKglKxnMTZ_X6T4.jpg"
-              alt="First slide"
+              src="https://fastly.4sqi.net/img/general/500x500/28121108_DCZq4CWoo3Ik7Cj2dZOXq9VTNeNNJpozkITXsM9OWSc.jpg"
+              alt="Au Cheval"
             />
-
+            <Carousel.Caption style={{ backgroundColor:"rgba(255,190,104,0.7)", color:"black"}}>
+              <h3>Au Cheval</h3>
+            </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item >
+          <Carousel.Item style={{border:"5px solid rgb(255, 190, 104)", borderRadius: "5px"}}>
             <Image
               className="w-100"
               src="https://fastly.4sqi.net/img/general/500x500/339236402_EVgKLmqfuN6MIj4adpA1ca99aNy6Ulh-TgLUpz36mLk.jpg"
-              alt="Second slide"
+              alt="Coalfire"
             />
+            <Carousel.Caption style={{ backgroundColor:"rgba(255,190,104,0.7)", color:"black"}}>
+              <h3>Coalfire</h3>
+            </Carousel.Caption>
+
           </Carousel.Item>
-          <Carousel.Item >
+          <Carousel.Item style={{border:"5px solid rgb(255, 190, 104)", borderRadius: "5px"}}>
             <Image
-              className=" w-100"
+              className="w-100"
               src="https://fastly.4sqi.net/img/general/500x500/n3J0LDoMxTFnhl20q4jgbS4Nr7kN-8stdelRZYJFkCk.jpg"
-              alt="Third slide"
+              alt="Hoosier Mama"
             />
+            <Carousel.Caption style={{ backgroundColor:"rgba(255,190,104,0.7)", color:"black"}}>
+              <h3>Hoosier Mama</h3>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item style={{border:"5px solid rgb(255, 190, 104)", borderRadius: "5px"}}>
+            <Image
+              className="w-100"
+              src="https://fastly.4sqi.net/img/general/500x500/1517802_juj4olP_KuADChnMGxmgvCKPXr5x-Q2wWklgIdSPsNQ.jpg"
+              alt="Paco's Tacos"
+            />
+            <Carousel.Caption style={{ backgroundColor:"rgba(255,190,104,0.7)", color:"black"}}>
+              <h3>Big Star</h3>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item style={{border:"5px solid rgb(255, 190, 104)", borderRadius: "5px"}}>
+            <Image
+              className="w-100"
+              src="https://fastly.4sqi.net/img/general/500x500/INZO4XFIPA54S4EUXWKSO2DJD0RHV4POJ3DNV1BKUI5YGX4F.jpg"
+              alt="Avec"
+            />
+            <Carousel.Caption style={{ backgroundColor:"rgba(255,190,104,0.7)", color:"black"}}>
+              <h3>Avec</h3>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item style={{border:"5px solid rgb(255, 190, 104)", borderRadius: "5px"}}>
+            <Image
+              className="w-100"
+              src="https://fastly.4sqi.net/img/general/500x500/349328_YhpWPJ27RkE952xM-TEyh486DqLQ6LCGFK2-ViFsg0k.jpg"
+              alt="Lost Larson Bakery"
+            />
+            <Carousel.Caption style={{ backgroundColor:"rgba(255,190,104,0.7)", color:"black"}}>
+              <h3>Lost Larson Bakery</h3>
+            </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
     </Row>
